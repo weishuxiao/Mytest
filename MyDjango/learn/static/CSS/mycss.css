@@ -1,0 +1,28 @@
+@CHARSET "UTF-8";
+
+/*自定义样式覆盖原有的bootstrap样式*/
+
+/*覆盖bootstrap 左边的导航条悬浮时的颜色*/
+.nav li a:hover{  
+ background:#DEDEDE;  
+}
+
+.nav-sidebar li {  
+border:0;
+border-top:1px solid #DEDEDE;
+}
+
+#date_selector{
+	width:100%;
+}
+
+#showarea{
+	padding-top: 0px;
+}
+
+.vertical-center{
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

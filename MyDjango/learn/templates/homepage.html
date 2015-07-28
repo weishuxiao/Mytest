@@ -1,0 +1,138 @@
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- 浏览器标签栏图标 -->
+<link rel="icon" href="/static/images/xiaomi.jpg">
+
+<title>Dashboard Template for Bootstrap</title>
+
+<!-- Bootstrap core CSS -->
+<link href="/static/CSS/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet">
+<!-- Custom styles for this template -->
+<link href="/static/CSS/dashboard.css" rel="stylesheet">
+
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+<script src="/static/JS/ie-emulation-modes-warning.js"></script>
+<script src="/static/JS/jquery-1.11.3.min.js"></script>
+
+<style type="text/css" adt="123"></style>
+<link href="/static/CSS/mycss.css" rel="stylesheet">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<script>
+	var month = '2014-01';//此处定义的变量可以所有js文件调用
+</script>
+</head>
+
+
+<body>
+	<div class="container-fluid">
+		<!-- {% include 'login_wait.html' %} -->
+		{% include 'login_wait.html' %}
+		<nav class="navbar navbar-inverse navbar-fixed-top"
+			style="z-index: 1;">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed"
+						data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+						aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span> <span
+							class="icon-bar"></span> <span class="icon-bar"></span> <span
+							class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#" style="color:#D4D4D4;font-weight:bold">Gn口日志分析系统</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">主面板</a></li>
+						<li><a href="#">设置</a></li>
+						<li><a href="#">用户</a></li>
+						<li><a href="#">帮助</a></li>
+					</ul>
+					<form class="navbar-form navbar-right">
+						<input type="text" class="form-control" placeholder="Search...">
+					</form>
+				</div>
+			</div>
+		</nav>
+
+		<div class="row">
+			<div class="col-sm-3 col-md-2 sidebar" style="z-index: 1;">
+				<ul class="nav nav-sidebar">
+					<!-- <li id="homepage_nav"><a href="#">首页</a></li> -->
+					<li id="fluxspeed_nav"><a href="#">传输速度</a></li>
+					<li id="apptype_nav"><a href="#">应用业务分类</a></li>
+					<li id="mobiletype_nav"><a href="#">终端类型</a></li>
+					<li id="webcount_nav"><a href="#">网站统计</a></li>
+					<li id="regioninfo_nav"><a href="#">小区信息</a></li>
+					<!-- <li id="protocal_nav"><a href="#">协议/HTTP内容</a></li> -->
+					<li id="user_nav"><a href="#">用户管理</a></li>
+					<li id="other_nav"><a href="#">其它</a></li>
+				</ul>
+			</div>
+
+			<!-- 时间选择器 -->
+			<div
+				class="col-xs-12 col-sm-11 col-sm-offset-3 col-md-9 col-md-offset-2"
+				style="display: none" id="datepicker">
+				<span id="dateselector_span">
+					<form class="form-inline ">
+						<div class="form-group  col-sm-2">
+							<select id="date_selector" class=" orm-control form-control">
+								<option>2014-01</option>
+								<option>2014-02</option>
+								<option>2014-03</option>
+								<option>2014-04</option>
+								<option>2014-05</option>
+								<option>2014-06</option>
+								<option>2014-07</option>
+								<option>2014-08</option>
+								<option>2014-09</option>
+								<option>2014-10</option>
+								<option>2014-11</option>
+								<option>2014-12</option>
+							</select>
+						</div>
+					</form>
+					<button id="monbutton" class="monbutton btn btn-info">刷新月份</button>
+				</span>
+			</div>
+			<div id="showarea"
+				class="col-xs-12 col-sm-11 col-sm-offset-2 col-md-9 col-md-offset-2 main">
+
+
+			</div>
+
+		</div>
+	</div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+	<!--  <script src="/static/JS/holder.min.js"></script> -->
+
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<script src="/static/JS/ie10-viewport-bug-workaround.js"></script>
+	<!-- Bootstrap core CSS -->
+	<!-- 导入自定义样式，覆盖原有bootstrap样式 -->
+	<script src="/static/JS/mydashboard-ajax.js"></script>
+	<!-- 地图相关js包导入，只能够放在这里，放在ajax返回页面提示undefined Amap -->
+	<script type="text/javascript"
+		src="http://webapi.amap.com/maps?v=1.3&key=89cf6d52f8ca1bbe66de45864b1bf1bf"></script>
+
+
+</body>
+</html>

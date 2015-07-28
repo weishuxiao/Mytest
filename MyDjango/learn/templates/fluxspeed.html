@@ -1,0 +1,25 @@
+<script>
+$('#datepicker').show();
+</script>
+<!-- ECharts单文件引入 -->
+<script src="/static/build/dist/echarts.js"></script>
+<link href="/static/CSS/mycss.css" rel="stylesheet">
+<script type="text/javascript">
+		var List = {{ speed_data|safe }};
+	</script>
+<script src="/static/JS/fluxspeed.js"></script>
+
+<div id="fluxspeed_area" class="col-sm-12">
+	<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+	<div class="col-xs-10 col-sm-12" id="fluxplot" style="height: 330px"></div>
+	<div class="col-xs-10 col-sm-12" id="fluxbar" style="height: 330px"></div>
+
+</div>
+
+
+
+<!-- 
+    {% for i in speed_data %}
+		{{ i }}<br>
+	{% endfor %}
+	 -->

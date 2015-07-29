@@ -16,6 +16,7 @@ def mysql_arr(raw_dict):
 
 '''
 用于从mysql当中获取终端网速
+------------------------------------
 '''
 def fluxspeed(request,a):
     #返回值为由dict构成的list
